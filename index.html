@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  
+    <title>Slider</title>
+      
+    <!-- bjqs.css contains the *essential* css needed for the slider to work -->
+    <link rel="stylesheet" href="bjqs.css">
+    <link rel="stylesheet" type="text/css"
+      href="http://releases.flowplayer.org/5.3.2/skin/minimalist.css" />
+    <!-- some pretty fonts for this demo page - not required for the slider -->
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro|Open+Sans:300' rel='stylesheet' type='text/css'> 
+    <link rel="stylesheet" href="avgrund.css">
+    <link rel="stylesheet" href="style.css">
+    
+
+    <!-- demo.css contains additional styles used to set up this demo page - not required for the slider --> 
+    <link rel="stylesheet" href="demo.css">
+
+    <!-- load jQuery and the plugin -->
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/bjqs-1.3.min.js"></script>
+     <script src="js/avgrund.js"></script>
+
+  <style>
+   /* site specific styling */
+   body {
+      font: 12px "Myriad Pro", "Lucida Grande", "Helvetica Neue", sans-serif;
+      text-align: center;
+      padding-top: 1%;
+
+   }
+
+   /* custom player skin */
+   .flowplayer { width: 80%; background-color: #222; background-size: cover; max-width: 800px; }
+   .flowplayer .fp-controls { background-color: rgba(0, 0, 0, 0.4)}
+   .flowplayer .fp-timeline { background-color: rgba(0, 0, 0, 0.5)}
+   .flowplayer .fp-progress { background-color: rgba(219, 0, 0, 1)}
+   .flowplayer .fp-buffer { background-color: rgba(249, 249, 249, 1)}
+   .flowplayer { background-image: url(http://farm4.staticflickr.com/3169/2972817861_73ae53c2e5_b.jpg)}
+
+   </style>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+   <!-- flowplayer javascript component -->
+   <script src="http://releases.flowplayer.org/5.3.2/flowplayer.min.js"></script>
+
+
+
+      
+  </head>
+  
+  <body>
+    <p id="button"  style="width:30px; height:30px" >button </p>
+  
+    <div id="container">
+
+      <div data-swf="http://releases.flowplayer.org/5.3.2/flowplayer.swf"
+      class="flowplayer no-toggle"
+      data-ratio="0.5625">
+      <video>
+         <source type="video/mp4" src="test1.mp4"/>
+      </video>
+      
+   </div>
+  <!-- 
+      The following script is not related to basic jQuery Slider 
+      It's used to create the code snippets in the demo.
+      https://github.com/maelstrom/SecretSource
+    -->
+   <script src="js/avgrund.js"></script>
+
+     <script>
+    $(document).ready(function(){
+    console.log("Hi");
+    //var $item = $('.reply, .submit');
+    $('#button').mouseenter(function(){
+    $('#container').avgrund();{ 
+  width: 380, // max is 640px
+  height: 280, // max is 350px
+  showClose: false, // switch to 'true' for enabling close button 
+  showCloseText: '', // type your text for close button
+  closeByEscape: true, // enables closing popup by 'Esc'..
+  closeByDocument: true, // ..and by clicking document itself
+  holderClass: '', // lets you name custom class for popin holder..
+  overlayClass: '', // ..and overlay block
+  enableStackAnimation: false, // another animation type
+  onBlurContainer: '', // enables blur filter for specified block
+  openOnEvent: true, // set to 'false' to init on load
+  setEvent: 'click', // use your event like 'mouseover', 'touchmove', etc.
+  onLoad: function () { ... }, // set custom call before popin is inited..
+  onUnload: function () { ... }, // ..and after it was closed 
+  template: 'Your content goes here..' // or function() { ... }
+});
+    });
+    });
+
+    </script>
+
+  </body>
+</html>

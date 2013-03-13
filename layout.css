@@ -13,3 +13,48 @@
    position: absolute;
    z-index: 9999;
 }
+
+#enterout{
+   position: absolute;
+   top: 100px;
+   left: 100px;
+   z-index: 9999;
+   display: none;
+
+}
+#button-container {
+	position: absolute;
+	right: 0;
+}
+
+#button{
+position: relative;
+z-index: 10000;
+display: inline-block;
+background-color: rgb(255, 255, 255);
+width: 100px;
+height: 100px;
+
+}
+
+#popout{
+	position: relative;
+	opacity: 0;
+	z-index: 10000;
+	color: rgb(0, 0, 0);
+}
+
+.tooltip{
+	position: relative;
+	width: 20px;
+	height: 10px;
+	z-index: 10001;
+	color: black;
+}
+
+#textcolor{
+    position: relative;
+    z-index: 10002;
+    top:50px;
+	color:rgb(100, 100, 100);
+}

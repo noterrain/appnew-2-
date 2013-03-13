@@ -25,8 +25,87 @@
       <source src="test2.mp4">
  </video>  
     <!--the container stuff-->
+<div id="popout" class="tooltip" title="jjj" onclick="document.getElementById('video_background').src = video_background.src.replace('wtf_greenscreen_sm.mp4', 'test1.mp4');">This is a div </div>
 
 <a id="enter">Visit W3Schools!</a>
+<img id="enterout" src="door.jpg">
+
+<div id="button-container">
+  button
+  <div id="button">&nbsp;</div>
+</div>
+
+<a id="textcolor"> makeup</a>
+
   </body>
+
+<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+
+  <script>
+  $(function() {
+    $( document ).tooltip();
+  });
+  </script>
+
+  <script>
+  $(document).ready(function(){
+    console.log("Hi");
+    //var $item = $('.reply, .submit');
+    $('#enter').mouseenter(function(){
+        //$item.fadeOut(1000);
+        console.log("Hello");
+        $('#enterout').show('slow');
+    });
+    $('#enter').mouseleave(function(){
+         console.log("Aha");
+        $('#enterout').fadeOut('slow');
+    });
+           
+
+});
+  </script>
+
+<script>
+  $(document).ready(function(){
+    console.log("en");
+    //var $item = $('.reply, .submit');
+    $('#button').mouseenter(function(){
+        //$item.fadeOut(1000);
+        console.log("ei");
+        $(this).animate({
+           width: '+=10px'
+    });
+
+      });
+    $('#button').mouseleave(function(){
+         console.log("ou");
+        $('#button').animate({
+           width: '-=10px'
+      });
+    });
+  });
+
+  </script>
+
+
+  <script>
+  $(document).ready(function(){
+    console.log("hei");
+    //var $item = $('.reply, .submit');
+    $('#textcolor').mouseenter(function(){
+        //$item.fadeOut(1000);
+        $(this).css({'color':'red', 'font-size':'150%'});
+  });
+    
+    $('#textcolor').mouseleave(function(){
+         $(this).css({'color':'black', 'font-size':'100%'});
+    });
+
+  });
+
+  </script>
+
+
    
 </html>  

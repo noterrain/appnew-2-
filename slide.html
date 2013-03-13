@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- Include the jQuery library (local or CDN) -->
+<script src="js/jquery-1.9.1.js"></script>
+
+<!-- Include the plugin *after* the jQuery library -->
+<script src="js/bjqs.min.js"></script>
+
+<!-- Include the basic styles -->
+<link type="text/css" rel="Stylesheet" href="bjqs.css" />
+
+<html>
+  <head>
+    <title>Slideshow</title>
+  </head>
+ 
+  <body>
+
+
+<div id="my-slideshow">
+    <ul class="bjqs">
+      <li>
+          <video>
+          <source src="test1.mp4" type="video/mp4">
+          </video>
+      </li>
+
+        <li>
+           <video>
+          <source src="test2.mp4" type="video/mp4">
+          </video>
+          <!-- Can go inside these slides--></li>
+    </ul>
+</div>
+
+
+<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+
+<script>
+  $(document).ready(function(){
+    $('#my-slideshow').bjqs({
+    height      : 320,
+    width       : 620,
+    responsive  : true
+  });
+});
+ </script>
+
+</body>
+
+
+
